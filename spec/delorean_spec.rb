@@ -10,7 +10,6 @@ describe Delorean do
 
   describe "time_travel_to" do
     it "should travel through time" do
-      false.should be_true
       past_date = Time.utc(2009,1,1,10,30)
       Delorean.time_travel_to past_date
       Time.now.should be_close(past_date, 1)
